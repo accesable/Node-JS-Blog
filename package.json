@@ -1,7 +1,7 @@
 {
   "name": "blog",
   "version": "1.0.0",
-  "description": "Blog Application using Node JS",
+  "description": "Blog using Node JS",
   "main": "index.js",
   "scripts": {
     "start": "nodemon --inspect index.js",
@@ -11,12 +11,6 @@
     "type": "git",
     "url": "git+https://github.com/accesable/Node-JS-Blog.git"
   },
-  "keywords": [
-    "blog",
-    "f8",
-    "Node",
-    "JS"
-  ],
   "author": "Nhut Anh",
   "license": "ISC",
   "bugs": {
