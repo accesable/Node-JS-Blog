@@ -1,0 +1,26 @@
+extends layouts/_main
+
+block content
+    .container.mt-3
+        form(method="POST")
+            .mb-3
+                label.form-label(for="disabledTextInput") Your Name
+                input#disabledTextInput.form-control(
+                placeholder="Enter Your Name" 
+                type="text"
+                name="name"
+                )
+            .mb-3
+                label.form-label(for="disabledSelect" ) Gender 
+                select#disabledSelect.form-select(name="gender")
+                    option --select gender ---
+                    option(value="male") Male 
+                    option(value="female") Female 
+            .mb-3
+                .form-check
+                input#disabledFieldsetCheck.form-check-input(
+                    type="checkbox"
+                    name="ischecked"
+                )
+                label.form-check-label(for="disabledFieldsetCheck") check this
+            button.btn.btn-primary(type="submit") Submit
