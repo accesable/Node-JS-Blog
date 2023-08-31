@@ -4,6 +4,7 @@ const morgan = require('morgan')
 const app = express()
 const port = 3000
 
+//use the self-defined route module
 const route = require('./routes')
 
 app.use(morgan('combined'))
@@ -19,6 +20,7 @@ app.set('views','./src/resources/views');
 // Set the view engine to Pug
 app.set('view engine', 'pug');
 
+//This is the function defined in the ./routes/index
 route(app)
 
 app.listen(port, () => {
