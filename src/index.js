@@ -6,25 +6,13 @@ const port = 3000
 
 //use the self-defined route module
 const route = require('./routes')
+const db = require('./config/db')
 
 app.use(morgan('combined'))
+//Connect to Database
+db.main()
 
 // getting-started.js
-const mongoose = require('mongoose');
-
-main().catch(err => console.log(err));
-
-async function main() {
-  try {
-       mongoose.connect('mongodb://127.0.0.1:27017/Blog_JS');
-      console.log("Connect Successfully! Yahhh!")
-  } catch (error) {
-    console.log("Cannot connect to MongoDB") 
-  }
-
-  // use `await mongoose.connect('mongodb://user:password@127.0.0.1:27017/test');` if your database has auth enabled
-}
-
 app.use(express.static(path.join(__dirname,'public')))
 app.use(express.urlencoded({
   extended:true
